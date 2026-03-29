@@ -23,7 +23,7 @@
     <h1>Welcome to the UMSI Career Development Resource Hub</h1>
 
     </header>
-    <main id="main-content">
+    <main id="main-content" class="home-main">
     <section>
       <h2>Your Central Hub for Career Success at UMSI</h2>
       <p>
@@ -44,9 +44,9 @@
         <li><strong>Modern Support, UMSI Excellence:</strong> We benchmark against top peer institutions and integrate UMSI’s unique support, showcasing our commitment to your success.</li>
       </ul>
     </section>
-        <section>
-      <h2>Start Here</h2>
+        <section class="start-here-section">
       <div>
+        <h2>Start Here</h2>
         <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
       </div>
       <div>
@@ -61,6 +61,45 @@
       </div>
     </section>
     <section>
+      <h2>Explore Resources by Category</h2>
+      <p>
+        Use the buttons below to quickly narrow the resource list by topic. This addition gives students another way to explore support without leaving the homepage.
+      </p>
+      <div class="filter-buttons">
+        <button type="button" class="filter-button active-filter" onclick="filterCards('all', this)">All Resources</button>
+        <button type="button" class="filter-button" onclick="filterCards('resume', this)">Resume</button>
+        <button type="button" class="filter-button" onclick="filterCards('networking', this)">Networking</button>
+        <button type="button" class="filter-button" onclick="filterCards('internship', this)">Internship Search</button>
+        <button type="button" class="filter-button" onclick="filterCards('appointments', this)">Appointments & Events</button>
+      </div>
+
+      <div class="filter-card-grid">
+        <article class="filter-card resume appointments">
+          <h3>Resume Guide and Coaching</h3>
+          <p>Start with the UMSI resume guide, then meet with a Career Coach if you would like feedback before applying.</p>
+          <a class="filter-link" href="resume.html">Go to Resume Page</a>
+        </article>
+
+        <article class="filter-card networking">
+          <h3>Build Networking Confidence</h3>
+          <p>Review networking email examples, the TIARA framework, and practical ways to start conversations with alumni and professionals.</p>
+          <a class="filter-link" href="networking.html">Go to Networking Page</a>
+        </article>
+
+        <article class="filter-card internship">
+          <h3>Create a Search Plan</h3>
+          <p>Use internship search steps, University Career Center resources, and a simple tracking system to stay organized.</p>
+          <a class="filter-link" href="internship.html">Go to Internship Page</a>
+        </article>
+
+        <article class="filter-card appointments">
+          <h3>Attend Events and Meet with CDO</h3>
+          <p>Students can use UMSI career events, workshops, and one-on-one support to get timely help during the semester.</p>
+          <a class="filter-link" href="https://umich.instructure.com/courses/137916/pages/attend-an-event" target="_blank">View Event Support</a>
+        </article>
+      </div>
+    </section>
+    <section>
       <h2>Connect with the UMSI Career Development Office</h2>
       <p>
         The UMSI Career Development Office (CDO) offers personalized support through appointments, events, and resource guides. <a href="https://umich.instructure.com/courses/137916" target="_blank">Visit the CDO website</a> or <a href="https://www.si.umich.edu/about-umsi/getting-umsi" target="_blank">find us on campus</a> to learn more, schedule a coaching session, or just say hello.
@@ -71,7 +110,8 @@
         UMGPT. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->
     </main>
     <footer>
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p>&copy; <span id="year"></span> University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
         </footer>
+    <script src="js/site.js"></script>
 </body>
 </html>
